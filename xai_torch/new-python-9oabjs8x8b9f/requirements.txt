@@ -1,0 +1,10 @@
+pandas==2.0.3
+torch==2.0.1
+transformers==4.38.1
+numpy==1.25.0
+Pillow==9.5.0
+tqdm==4.65.0
+grad-cam==1.5.0
+matplotlib==3.7.2
+opencv-python-headless
+openpyxl

@@ -1,0 +1,769 @@
+{
+  "pipeline": {
+    "parameter-p51te3vnfbkt": {
+      "information": {
+        "id": "parameter",
+        "name": "Parameter",
+        "description": "Parameter input.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks",
+        "block_type": "compute"
+      },
+      "inputs": {},
+      "outputs": {
+        "parameter": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "saving_dir"
+            }
+          ]
+        }
+      },
+      "action": {
+        "container": {
+          "image": "",
+          "version": "",
+          "command_line": []
+        },
+        "parameters": {
+          "parameter": {
+            "value": "\"results\"",
+            "type": "Any"
+          }
+        }
+      },
+      "views": {
+        "node": {
+          "active": "true",
+          "title_bar": {
+            "background_color": "#909090"
+          },
+          "preview": {},
+          "html": "<input type='text' value='abcd' parameters-parameter/>",
+          "pos_x": "-73",
+          "pos_y": "800",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [],
+            "output": [
+              "parameter"
+            ]
+          }
+        }
+      },
+      "events": {}
+    },
+    "view-images-64qtrrvwe7as": {
+      "information": {
+        "id": "view-images",
+        "name": "View Images",
+        "description": "Generates an HTML file with a unique name and returns the file name.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks/view-images",
+        "block_type": "view"
+      },
+      "inputs": {
+        "image_paths_view": {
+          "type": "List[file]",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "GradCAM"
+            }
+          ]
+        }
+      },
+      "outputs": {
+        "html": {
+          "type": "file",
+          "connections": []
+        }
+      },
+      "action": {
+        "container": {
+          "image": "view-images",
+          "version": "view-images-64qtrrvwe7as",
+          "command_line": [
+            "python",
+            "entrypoint.py"
+          ]
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {
+            "background_color": "#D55908"
+          },
+          "preview": {
+            "active": "true"
+          },
+          "html": "",
+          "pos_x": "868",
+          "pos_y": "-2",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [
+              "image_paths_view"
+            ],
+            "output": [
+              "html"
+            ]
+          }
+        },
+        "mode": "modal"
+      },
+      "events": {}
+    },
+    "view-images-qb19jhzul2cp": {
+      "information": {
+        "id": "view-images",
+        "name": "View Images",
+        "description": "Generates an HTML file with a unique name and returns the file name.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks/view-images",
+        "block_type": "view"
+      },
+      "inputs": {
+        "image_paths_view": {
+          "type": "List[file]",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "HiResCAM"
+            }
+          ]
+        }
+      },
+      "outputs": {
+        "html": {
+          "type": "file",
+          "connections": []
+        }
+      },
+      "action": {
+        "container": {
+          "image": "view-images",
+          "version": "view-images-qb19jhzul2cp",
+          "command_line": [
+            "python",
+            "entrypoint.py"
+          ]
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {
+            "background_color": "#D55908"
+          },
+          "preview": {
+            "active": "true"
+          },
+          "html": "",
+          "pos_x": "1342",
+          "pos_y": "5",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [
+              "image_paths_view"
+            ],
+            "output": [
+              "html"
+            ]
+          }
+        },
+        "mode": "modal"
+      },
+      "events": {}
+    },
+    "view-images-imit3tqlpln2": {
+      "information": {
+        "id": "view-images",
+        "name": "View Images",
+        "description": "Generates an HTML file with a unique name and returns the file name.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks/view-images",
+        "block_type": "view"
+      },
+      "inputs": {
+        "image_paths_view": {
+          "type": "List[file]",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "EigenCAM"
+            }
+          ]
+        }
+      },
+      "outputs": {
+        "html": {
+          "type": "file",
+          "connections": []
+        }
+      },
+      "action": {
+        "container": {
+          "image": "view-images",
+          "version": "view-images-imit3tqlpln2",
+          "command_line": [
+            "python",
+            "entrypoint.py"
+          ]
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {
+            "background_color": "#D55908"
+          },
+          "preview": {
+            "active": "true"
+          },
+          "html": "",
+          "pos_x": "857",
+          "pos_y": "840",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [
+              "image_paths_view"
+            ],
+            "output": [
+              "html"
+            ]
+          }
+        },
+        "mode": "modal"
+      },
+      "events": {}
+    },
+    "new-python-9oabjs8x8b9f": {
+      "information": {
+        "id": "xai-torch",
+        "name": "XAI-torch",
+        "description": "lib:https://github.com/jacobgil/pytorch-grad-cam/tree/master?tab=readme-ov-file\ntargets are set to None: If targets is None, the highest scoring category\nNeed to wrap up the huggingface model to torch model.\n\nmodel_architecture_type will be responsible for choosing the reshaping of the output tensors.\nhttps://jacobgil.github.io/pytorch-gradcam-book/vision_transformers.html\n\ntarget layers: list of target layers \n\n-----------------------------------------------Theory:-----------------------------------------------------------\n\nxai algorithms requires input of the layers which has output (Batch_size, Channels, w, h)\n\nBatch_size: number of images.\nChannels  : Features (for cnn number of kernels).\nw, h      : size of the features (for cnn size of the kernels.)\n\nfor the transformer based architectures we need to construct the reshape_transform function.\n\nwhat is reshape_transform function ?\nTo apply the xai on transformer architecture we need layers which has output (batchsize, patchsize*patchsize+1 or patchsize*patchsize, features.)\nbecause it does not produce 2D feature maps as  cnn.\nOnce we get the output in this shape we need to transform it to match it (batch_size, features, patchsize, patchsize)\n\nHow to build reshape_transform function ?\nFor ViT : if the output shape is (1, 197, 192): 197 represents the number of tokens and the first one is for [cls] .\n        we ignore the first token so (1, 196, 192) -> (1, 14, 14, 192) ->( 1, 192, 14, 14 )[just like cnn]\n\nFor SwiT : there is no [cls] token in SwiT, so (1, 196, 192) -> (1, 14, 14, 192) ->( 1, 192, 14, 14 )[just like cnn]\n\nFor the Users:\nselect the suitable layer, that match the output shape as discribe above.\n\nHow to check which layers to select?\n\nIf you are using pre-train models and not sure about the summary.\nUse \n\ndef print_model_summary(model, input_size, batch_size=-1, device=\"cuda\"):\n    from torchinfo import torchinfo\n    summary_info = torchinfo.summary(model, input_size=(batch_size, *input_size), device=device, verbose=2)\n    print(summary_info)\n\nor try to print the model.\n\nSome of the common choice for the target layers.\n\n#my_model.resnet.encoder.stages[-1].layers[-1]\n#my_model.vit.encoder.layer[-4].output\n#my_model.swinv2.layernorm",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks/new-python",
+        "block_type": "compute"
+      },
+      "inputs": {
+        "test_dataset_file": {
+          "type": "file",
+          "connections": [
+            {
+              "block": "file-rvy15t6ct6a4",
+              "variable": "path"
+            }
+          ]
+        },
+        "model_processor_file": {
+          "type": "file",
+          "connections": [
+            {
+              "block": "file-7wihrwh6jq0i",
+              "variable": "path"
+            }
+          ]
+        },
+        "model_architecture_type": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "parameter-conuvjrhswme",
+              "variable": "parameter"
+            }
+          ]
+        },
+        "target_layer": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "parameter-8hmsr1tlraqn",
+              "variable": "parameter"
+            }
+          ]
+        },
+        "saving_dir": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "parameter-p51te3vnfbkt",
+              "variable": "parameter"
+            }
+          ]
+        }
+      },
+      "outputs": {
+        "GradCAM": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "view-images-64qtrrvwe7as",
+              "variable": "image_paths_view"
+            }
+          ]
+        },
+        "HiResCAM": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "view-images-qb19jhzul2cp",
+              "variable": "image_paths_view"
+            }
+          ]
+        },
+        "GradCAMPlusPlus": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "view-images-jqec9ihcsmse",
+              "variable": "image_paths_view"
+            }
+          ]
+        },
+        "XGradCAM": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "view-images-tyo6ui1ncv7v",
+              "variable": "image_paths_view"
+            }
+          ]
+        },
+        "EigenCAM": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "view-images-imit3tqlpln2",
+              "variable": "image_paths_view"
+            }
+          ]
+        }
+      },
+      "action": {
+        "container": {
+          "image": "xai-torch",
+          "version": "new-python-9oabjs8x8b9f",
+          "command_line": [
+            "python",
+            "entrypoint.py"
+          ]
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {},
+          "preview": {},
+          "html": "",
+          "pos_x": "460",
+          "pos_y": "218",
+          "pos_z": "999",
+          "behavior": "modal",
+          "order": {
+            "input": [
+              "test_dataset_file",
+              "model_processor_file",
+              "model_architecture_type",
+              "target_layer",
+              "saving_dir"
+            ],
+            "output": [
+              "GradCAM",
+              "HiResCAM",
+              "GradCAMPlusPlus",
+              "XGradCAM",
+              "EigenCAM"
+            ]
+          }
+        }
+      },
+      "events": {}
+    },
+    "file-rvy15t6ct6a4": {
+      "information": {
+        "id": "file",
+        "name": "File",
+        "description": "File parameter input.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks",
+        "block_type": "compute"
+      },
+      "inputs": {},
+      "outputs": {
+        "path": {
+          "type": "file",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "test_dataset_file"
+            }
+          ]
+        }
+      },
+      "action": {
+        "container": {
+          "image": "",
+          "version": "",
+          "command_line": []
+        },
+        "parameters": {
+          "path": {
+            "value": "pipeline-wtlikxfqhoje/019083a3-1178-79be-8d16-9a00e1ed0e1a/dataset.zip",
+            "type": "blob"
+          }
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {
+            "background_color": "#909090"
+          },
+          "preview": {},
+          "html": "<input type='file' name='fileInput' parameters-file/>",
+          "pos_x": "-50",
+          "pos_y": "-147",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [],
+            "output": [
+              "path"
+            ]
+          }
+        }
+      },
+      "events": {}
+    },
+    "file-7wihrwh6jq0i": {
+      "information": {
+        "id": "file",
+        "name": "File",
+        "description": "File parameter input.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks",
+        "block_type": "compute"
+      },
+      "inputs": {},
+      "outputs": {
+        "path": {
+          "type": "file",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "model_processor_file"
+            }
+          ]
+        }
+      },
+      "action": {
+        "container": {
+          "image": "",
+          "version": "",
+          "command_line": []
+        },
+        "parameters": {
+          "path": {
+            "value": "pipeline-wtlikxfqhoje/019083a3-1178-79be-8d16-9a00e1ed0e1a/resnet50_model_and_transform.pkl",
+            "type": "blob"
+          }
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {
+            "background_color": "#909090"
+          },
+          "preview": {},
+          "html": "<input type='file' name='fileInput' parameters-file/>",
+          "pos_x": "-284",
+          "pos_y": "160",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [],
+            "output": [
+              "path"
+            ]
+          }
+        }
+      },
+      "events": {}
+    },
+    "parameter-conuvjrhswme": {
+      "information": {
+        "id": "parameter",
+        "name": "Parameter",
+        "description": "Parameter input.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks",
+        "block_type": "compute"
+      },
+      "inputs": {},
+      "outputs": {
+        "parameter": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "model_architecture_type"
+            }
+          ]
+        }
+      },
+      "action": {
+        "container": {
+          "image": "",
+          "version": "",
+          "command_line": []
+        },
+        "parameters": {
+          "parameter": {
+            "value": "\"cnn\"",
+            "type": "Any"
+          }
+        }
+      },
+      "views": {
+        "node": {
+          "active": "true",
+          "title_bar": {
+            "background_color": "#909090"
+          },
+          "preview": {},
+          "html": "<input type='text' value='abcd' parameters-parameter/>",
+          "pos_x": "-145",
+          "pos_y": "390",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [],
+            "output": [
+              "parameter"
+            ]
+          }
+        }
+      },
+      "events": {}
+    },
+    "parameter-8hmsr1tlraqn": {
+      "information": {
+        "id": "parameter",
+        "name": "Parameter",
+        "description": "Parameter input.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks",
+        "block_type": "compute"
+      },
+      "inputs": {},
+      "outputs": {
+        "parameter": {
+          "type": "Any",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "target_layer"
+            }
+          ]
+        }
+      },
+      "action": {
+        "container": {
+          "image": "",
+          "version": "",
+          "command_line": []
+        },
+        "parameters": {
+          "parameter": {
+            "value": "\"model.layer4[-1]\"",
+            "type": "Any"
+          }
+        }
+      },
+      "views": {
+        "node": {
+          "active": "true",
+          "title_bar": {
+            "background_color": "#909090"
+          },
+          "preview": {},
+          "html": "<input type='text' value='abcd' parameters-parameter/>",
+          "pos_x": "-178",
+          "pos_y": "609",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [],
+            "output": [
+              "parameter"
+            ]
+          }
+        }
+      },
+      "events": {}
+    },
+    "view-images-jqec9ihcsmse": {
+      "information": {
+        "id": "view-images",
+        "name": "View Images",
+        "description": "Generates an HTML file with a unique name and returns the file name.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks/view-images",
+        "block_type": "view"
+      },
+      "inputs": {
+        "image_paths_view": {
+          "type": "List[file]",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "GradCAMPlusPlus"
+            }
+          ]
+        }
+      },
+      "outputs": {
+        "html": {
+          "type": "file",
+          "connections": []
+        }
+      },
+      "action": {
+        "container": {
+          "image": "view-images",
+          "version": "view-images-jqec9ihcsmse",
+          "command_line": [
+            "python",
+            "entrypoint.py"
+          ]
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {
+            "background_color": "#D55908"
+          },
+          "preview": {
+            "active": "true"
+          },
+          "html": "",
+          "pos_x": "1678",
+          "pos_y": "407",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [
+              "image_paths_view"
+            ],
+            "output": [
+              "html"
+            ]
+          }
+        },
+        "mode": "modal"
+      },
+      "events": {}
+    },
+    "view-images-tyo6ui1ncv7v": {
+      "information": {
+        "id": "view-images",
+        "name": "View Images",
+        "description": "Generates an HTML file with a unique name and returns the file name.",
+        "system_versions": [
+          "0.1"
+        ],
+        "block_version": "block version number",
+        "block_source": "core/blocks/view-images",
+        "block_type": "view"
+      },
+      "inputs": {
+        "image_paths_view": {
+          "type": "List[file]",
+          "connections": [
+            {
+              "block": "new-python-9oabjs8x8b9f",
+              "variable": "XGradCAM"
+            }
+          ]
+        }
+      },
+      "outputs": {
+        "html": {
+          "type": "file",
+          "connections": []
+        }
+      },
+      "action": {
+        "container": {
+          "image": "view-images",
+          "version": "view-images-tyo6ui1ncv7v",
+          "command_line": [
+            "python",
+            "entrypoint.py"
+          ]
+        }
+      },
+      "views": {
+        "node": {
+          "active": "True or False",
+          "title_bar": {
+            "background_color": "#D55908"
+          },
+          "preview": {
+            "active": "true"
+          },
+          "html": "",
+          "pos_x": "1337",
+          "pos_y": "838",
+          "pos_z": "999, this is the z-index for 2D canvas",
+          "order": {
+            "input": [
+              "image_paths_view"
+            ],
+            "output": [
+              "html"
+            ]
+          }
+        },
+        "mode": "modal"
+      },
+      "events": {}
+    }
+  },
+  "sink": "C:\\Users\\MEET\\Downloads\\xai_torch",
+  "build": "C:\\Users\\MEET\\Downloads\\xai_torch",
+  "name": "xai_torch",
+  "id": "pipeline-wtlikxfqhoje"
+}
