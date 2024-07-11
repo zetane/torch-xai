@@ -2,11 +2,11 @@
 ZetaForge XAI Torch Pipeline
 
 Block input details:
-test_dataset_file : zip file contaning all the images and xlsx dataframe, where image column name must be "filename".
-model_process_file: pickle file containing model and the pre-process code, see the code below for how to save the model and processor.
-model_architecture_type: three options we have "cnn", "ViT", "SwiT"
-target_layer: name of the target layer on which xai will be performed.
-saving_dir: name of the save dir.
+- test_dataset_file : zip file contaning all the images and xlsx dataframe, where image column name must be "filename".
+- model_process_file: pickle file containing model and the pre-process code, see the code below for how to save the model and processor.
+- model_architecture_type: three options we have "cnn", "ViT", "SwiT"
+- target_layer: name of the target layer on which xai will be performed.
+- saving_dir: name of the save dir.
 
 Here is the demo script for how to save model and processor.
 
