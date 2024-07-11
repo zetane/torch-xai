@@ -1,5 +1,8 @@
 # torch-xai
-ZetaForge XAI Torch Pipeline
+
+## ZetaForge XAI Torch Pipeline
+
+![image (32)](https://github.com/user-attachments/assets/34127c39-5e85-4d90-8c0f-99a34e119345)
 
 Block input details:
 - test_dataset_file : zip file contaning all the images and xlsx dataframe, where image column name must be "filename".
